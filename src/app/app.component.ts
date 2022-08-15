@@ -12,7 +12,8 @@ export class AppComponent {
   title = 'Trial';
   products:Product[];
   Entername="a";
-  parentData=""
+  parentData="";
+  value = "";
   productService;
   constructor(){  
     this.productService=new ProductService();  
@@ -23,5 +24,8 @@ export class AppComponent {
   
   TransferData(){
     this.parentData=this.Entername;
+  }
+  sendData(value){
+    this.value=value;
   }
 }

@@ -28,7 +28,8 @@
     </div>
   </div>
 </div>
-<app-leaves [parentData]="parentData"></app-leaves>
+{{value}}
+<app-leaves (sendData)="sendData($event)"></app-leaves>
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 <!-- * * * * * * * * * * * The content above * * * * * * * * * * * -->
 <!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
