@@ -1,4 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Product } from './product';
+import { ProductService } from './product.service';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +10,18 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Trial';
+  products:Product[];
+  Entername="a";
+  parentData=""
+  productService;
+  constructor(){  
+    this.productService=new ProductService();  
+  }   
+  getProducts() {       
+    this.products=this.productService.getProducts();  
+  }    
+  
+  TransferData(){
+    this.parentData=this.Entername;
+  }
 }
